@@ -1,4 +1,4 @@
-{% assign image_asset_path = '/assets/img/'%}
+{% assign image_asset_path = '/uploads/'%}
 {% assign image_url = include.url %}
 {% if image_url contains "http://" or image_url contains "https://" %}
 <figure><img src="{{ image_url }}" alt="{{ include.description }}"/></figure>

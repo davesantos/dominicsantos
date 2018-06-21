@@ -1,17 +1,16 @@
 ---
 layout: default
-title: Home
-group: navigation
-weight: 1
 ---
-
 <div class="post-list">
   {% for post in site.posts %}
   {% unless post.draft %}
-  <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-
-  {{ post.content }}
-
+  <article itemscope itemtype="http://schema.org/BlogPosting">
+    {% assign images = post.images %}
+    {% for image in images %}
+      <p>{{ image }}</p>
+    {% endfor %}
+    {{ post.content }}
+  </article>
   {% endunless %}
   {% endfor %}
 </div>

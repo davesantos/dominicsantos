@@ -41,18 +41,36 @@ body
   // +prefixer(font-feature-settings, "kern" 1, webkit moz o spec)
   // +rootsize
   opacity: 0
-  padding-left: modular-scale(-2)
-  padding-right: modular-scale(-2)
   font-family: $font-stack-helvetica
 
 a
   text-decoration: none
 
+img, video, object, embed
+  max-width: 100%
+  height: auto !important
+
 img
   -ms-interpolation-mode: bicubic
-  // margin-left: auto
-  // margin-right: auto
-  display: block
-  height: auto !important
-  max-width: 100%
   vertical-align: middle
+
+nav ul
+  margin: 0
+  padding: 0
+  list-style: none
+
+%widthSize
+  width: 100%
+  padding-left: modular-scale(-2)
+  padding-right: modular-scale(-2)
+
+.header
+  @extend %widthSize
+
+
+
+.main
+  @extend %widthSize
+
+.footer
+  @extend %widthSize
