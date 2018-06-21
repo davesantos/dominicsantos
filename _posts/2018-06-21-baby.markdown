@@ -1,6 +1,6 @@
 ---
 title: baby
-layout: post
+weight: 2
 images:
   - BABYGLUEDTOYOU.jpg
 ---

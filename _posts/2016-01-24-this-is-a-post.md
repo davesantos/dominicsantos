@@ -1,12 +1,10 @@
 ---
 title: Hello World
 date: 2016-01-24 06:13:13 Z
+weight: 1
 categories:
 - jekyll
 - update
-layout: post
-stylesheets:
-- red.css
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus tempore facere necessitatibus porro deserunt officiis optio nulla facilis illo est reiciendis ipsam rerum non, aliquid odit aspernatur, eos in voluptas.
