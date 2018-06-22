@@ -5,7 +5,7 @@ layout: default
 {% assign posts = site.posts | sort:"weight" %}
 {% for post in posts %}
 {% unless post.draft %}
-<article itemscope itemtype="http://schema.org/BlogPosting">
+<article class="article" itemscope itemtype="http://schema.org/BlogPosting">
   {% assign images = post.images %}
   {% for image in images %}
     {% if image contains "http://" or image contains "https://" %}
@@ -14,7 +14,7 @@ layout: default
     <img src="{{ image | prepend: image_asset_path }}" alt=""/>
     {% endif %}
   {% endfor %}
-  {{ post.content }}
+  <p>{{ post.content }} {{ post.date | date: "%B %Y" }}</p>
 </article>
 {% endunless %}
 {% endfor %}
