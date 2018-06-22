@@ -33,6 +33,9 @@
   font-size: calc(16px + (24 - 16) * (100vw - 320px)/(1600 - 320))
   line-height: 1.5
 
+*, *:before, *:after
+  box-sizing: border-box
+
 .js body, .no-js body, .wf-active body, .wf-inactive body
   opacity: 1
 
@@ -52,25 +55,36 @@ img, video, object, embed
 
 img
   -ms-interpolation-mode: bicubic
+  display: block
+  margin-left: auto
+  margin-right: auto
   vertical-align: middle
 
 nav ul
   margin: 0
   padding: 0
   list-style: none
+  li
+    display: inline-block
+
 
 %widthSize
+  // display: flex
+  padding-left: modular-scale(-5)
+  padding-right: modular-scale(-5)
   width: 100%
-  padding-left: modular-scale(-2)
-  padding-right: modular-scale(-2)
 
 .header
   @extend %widthSize
-
-
+  height: 20vh
+  padding-top: modular-scale(1)
 
 .main
   @extend %widthSize
+
+.article
+  display: block
+  margin-bottom: 1.5rem
 
 .footer
   @extend %widthSize
