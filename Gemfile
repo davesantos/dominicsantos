@@ -10,7 +10,7 @@ ruby RUBY_VERSION
 # This will help ensure the proper Jekyll version is running.
 # Happy Jekylling!
 
-gem "jekyll", "3.8.0"
+gem "jekyll", "3.8.3"
 gem 'bourbon'
 
 # If you want to use GitHub Pages, remove the "gem "jekyll"" above and
