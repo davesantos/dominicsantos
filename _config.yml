@@ -5,6 +5,9 @@ markdown: kramdown
 permalink: /posts/:title
 exclude: ["bower_components", "node_modules", "config.rb", "gulpfile.js", "package.json","*.sublime-project", "*.sublime-workspace", "*.log", "css/_breakpoints", "LICENSE", "README.md"]
 
+# Github pages only runs in safe mode
+safe: true
+
 plugins:
   - jekyll-sitemap
 
