@@ -7,13 +7,19 @@ layout: default
 {% unless post.draft %}
 <article class="article" itemscope itemtype="http://schema.org/BlogPosting">
   {% assign images = post.images %}
+
   {% for image in images %}
     {% if image contains "http://" or image contains "https://" %}
     <img src="{{ image }}" alt=""/>
     {% else %}
-    <img src="{{ image | prepend: image_asset_path }}" alt=""/>
+      {% if site.env == 'production' or jekyll.environment == "production" %}
+      <img src="{{ image | prepend: image_asset_path | prepend: site.baseurl }}" alt=""/>
+      {% else %}
+      <img src="{{ image | prepend: image_asset_path }}" alt=""/>
+      {% endif %}
     {% endif %}
   {% endfor %}
+
   <p>{{ post.content }} {{ post.date | date: "%B %Y" }}</p>
 </article>
 {% endunless %}
