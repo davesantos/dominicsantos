@@ -20,24 +20,17 @@
 
   {% assign asset_path = site.assets.asset_path %}
 
-  <link type="text/css" rel="stylesheet" href="{{ 'all.css' | prepend: '/css/' | prepend: asset_path | replace: '//', '/' }}">
-
-  {% assign stylesheets = page.stylesheets %}
-
-  {% if stylesheets %}
-    {% for style in stylesheets %}
-      <link type="text/css" rel="stylesheet" href="{{ style | prepend: 'css/' | prepend: asset_path | replace: '//', '/' }}">
-    {% endfor %}
+  {% if site.env == 'production' or jekyll.environment == "production" %}
+  <link type="text/css" rel="stylesheet" href="{{ 'all.css' | prepend: '/css/' | prepend: site.baseurl | replace: '//', '/' }}">
+  {% else %}
+  <link type="text/css" rel="stylesheet" href="{{ 'all.css' | prepend: '/css/' | replace: '//', '/' }}">
   {% endif %}
 
-  {% if page.style %}
-   <style type="text/css">
-      {{ page.style }}
-   </style>
-  {% endif %}
 
+  {% comment %}
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url | replace: '//', '/' }}">
   <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}">
+  {% endcomment %}
   <script src="{{ 'modernizr.js' | prepend: '/js/vendor/' | prepend: asset_path | replace: '//', '/' }}"></script>
 
 </head>
