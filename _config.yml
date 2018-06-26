@@ -39,10 +39,10 @@ plugins:
 collections:
   posts:
     title: Posts
-    output: false
+    output: true
   uploads:
     title: Uploads
-    output: true
+    output: false
 
 defaults:
 - scope:
