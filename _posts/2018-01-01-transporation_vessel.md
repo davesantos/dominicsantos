@@ -15,7 +15,7 @@ images:
   - transportation-vessel-dominicsantos-4-2.jpg
 ---
 
-“Transportation Vessels” 2018. Mixed media. 37x17x13”
+“Transportation Vessels” 2018. Mixed media. 37x17x13in.
 
 “Collage allows the opening up of conscious, which is very direct...it’s also a way of looking at what you are consuming all the time.”
 -John Stezaker

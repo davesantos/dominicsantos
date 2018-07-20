@@ -5,4 +5,4 @@ date: 2016-04-01
 images:
   - when-dominicsantos.jpg
 ---
-“When” Music Video for Tomorrows Tulips — April 2016
+“When” Music Video for _Tomorrows Tulips_ — April 2016
