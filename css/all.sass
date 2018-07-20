@@ -77,10 +77,12 @@ nav ul
   li
     display: inline-block
 
-p
+.caption
   @extend %widthSize
   text-transform: uppercase
   justify-content: center
+  flex-direction: column
+  text-align: center
 
 %widthSize
   display: flex
@@ -108,8 +110,6 @@ p
   height: 10vh
 
 // Carousel
-.carousel
-  background: #eee
 
 .carousel-cell
   width: 100%
