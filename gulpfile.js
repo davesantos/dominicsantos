@@ -3,6 +3,7 @@
 var gulp = require("gulp");
 var browserSync = require('browser-sync');
 var exec = require('child_process').exec
+var sass = require('gulp-sass');
 
 var paths = {
   build: '_site',
@@ -21,7 +22,11 @@ var jsFiles = [
 ]
 
 var jekyllFiles = [
-  '**/*.{html,yml,md}'
+  '*.{html,yml,md}',
+  '_posts/*.markdown',
+  '_posts/*.md',
+  '_layouts/*.html',
+  '_includes/*.html'
 ]
 
 // Unused
@@ -31,12 +36,17 @@ function errorHandler(error) {
   browserSync.notify('Error');
 }
 
+
+gulp.task('sass', function () {
+  var stream = gulp.src(sassFiles)
+    .pipe(sass.sync().on('error', sass.logError))
+    .pipe(gulp.dest(paths.build + '/' + paths.css));
+  return stream;
+});
+
 gulp.task('js', function() {
   var stream = gulp.src(jsFiles)
     .pipe(gulp.dest(paths.build + '/' + paths.scripts))
-    .pipe(browserSync.reload({
-      stream: true
-    }));
   return stream;
 });
 
@@ -66,9 +76,9 @@ gulp.task('serve', function(done) {
    }
  });
 
- gulp.watch(sassFiles, gulp.parallel('jekyll-build')).on('change', browserSync.reload);
+ gulp.watch(sassFiles, gulp.parallel('jekyll-rebuild')).on('change', browserSync.reload);
  gulp.watch(jsFiles, gulp.parallel('js')).on('change', browserSync.reload);
- gulp.watch(jekyllFiles, gulp.parallel('jekyll-build')).on('change', browserSync.reload);
+ gulp.watch(jekyllFiles, gulp.parallel('jekyll-rebuild')).on('all', browserSync.reload);
  return console.log('Serve function ran'), done();
 });
 
