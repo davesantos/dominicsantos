@@ -9,4 +9,4 @@ images:
 - stage-visuals-tomorrows-tulips-dominicsantos-4.jpg
 - stage-visuals-tomorrows-tulips-dominicsantos-5.jpg
 ---
-Stage visuals and Art Direction for the band Tomorrows Tulips. — 2016
+Stage visuals and Art Direction for the band Tomorrows Tulips. — 2013 - 2016
