@@ -11,5 +11,10 @@
       <script src="{{ js | prepend: 'js/' | prepend: asset_path }}"></script>
   {% endfor %}
 {% endif %}
+
+{% if site.env == 'production' or jekyll.environment == "production" %}
+<script src="{{ 'all.js' | prepend: 'js/' | prepend: site.baseurl }}"></script>
+{% else %}
 <script src="{{ 'all.js' | prepend: 'js/' }}"></script>
+{% endif %}
 
