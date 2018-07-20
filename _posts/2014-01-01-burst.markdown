@@ -1,0 +1,8 @@
+---
+title: Burst
+weight: 30
+date: 2014-01-01
+images:
+  - burst-dominicsantos.jpg
+---
+“Burst” 2014. Inkjet print,  20x14”

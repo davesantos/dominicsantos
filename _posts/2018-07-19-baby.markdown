@@ -1,0 +1,8 @@
+---
+title: Baby
+weight: 80
+date: 2014-08-01
+images:
+  - baby-dominicsantos.jpg
+---
+“Baby & Glued to You” Music Video for Tomorrows Tulips — August 2014
