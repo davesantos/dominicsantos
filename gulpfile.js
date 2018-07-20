@@ -21,7 +21,16 @@ var jsFiles = [
   'js/**/*.js'
 ]
 
+var jekyllFiles = [
+  '**/*.{html,yml,md}'
+]
 
+// Unused
+function errorHandler(error) {
+  console.error(String(error));
+  this.emit('end');
+  browserSync.notify('Error');
+}
 
 gulp.task('js', function() {
   var stream = gulp.src(jsFiles)
@@ -51,6 +60,7 @@ gulp.task('jekyll-rebuild', gulp.series('jekyll-build', function(done) {
 }));
 
 gulp.task('serve', function(done) {
+
  browserSync.init({
    server: {
      baseDir: paths.build
@@ -59,9 +69,8 @@ gulp.task('serve', function(done) {
 
  gulp.watch(sassFiles, gulp.series('jekyll-rebuild')).on('change', browserSync.reload);
  gulp.watch(jsFiles, gulp.series('js')).on('change', browserSync.reload);
+ gulp.watch(jekyllFiles, gulp.series('jekyll-rebuild')).on('change', browserSync.reload);
  return console.log('Serve function ran'), done();
 });
-
-
 
 gulp.task('default', gulp.series('serve'));
