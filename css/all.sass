@@ -30,9 +30,15 @@
 //
 //------------------------------------------------------------
 
-\:root
-  font-size: calc(16px + (24 - 16) * (100vw - 320px)/(1600 - 320))
-  line-height: 1.5
+
+@media screen and (min-width: 320px)
+  \:root
+    font-size: calc(16px + (24 - 16) * (100vw - 320px)/(1600 - 320))
+    line-height: 1.5
+
+@media screen and (min-width: 1000px)
+  \:root
+    font-size: 22px
 
 @-ms-viewport
   width: device-width
@@ -48,7 +54,7 @@ body
   // +prefixer(font-feature-settings, "kern" 1, webkit moz o spec)
   // +rootsize
   opacity: 0
-  font-family: $font-stack-helvetica
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"
 
 a
   text-decoration: none
@@ -71,9 +77,13 @@ nav ul
   li
     display: inline-block
 
+p
+  @extend %widthSize
+  text-transform: uppercase
+  justify-content: center
 
 %widthSize
-  // display: flex
+  display: flex
   padding-left: modular-scale(-5)
   padding-right: modular-scale(-5)
   width: 100%
@@ -84,11 +94,11 @@ nav ul
   padding-top: modular-scale(1)
 
 .main
-  @extend %widthSize
+  // @extend %widthSize
 
 .article
   display: block
-  margin-bottom: 1.5rem
+  margin-bottom: 5rem
 
 .footer
   display: flex
@@ -104,4 +114,3 @@ nav ul
 .carousel-cell
   width: 100%
   height: auto
-  margin-right: 10px
