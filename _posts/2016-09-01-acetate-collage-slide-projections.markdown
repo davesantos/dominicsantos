@@ -9,4 +9,4 @@ images:
   - tomorrows-tulips-echoplex-dominicsantos-4.jpg
 
 ---
-Acetate collage slide projections for the band _Tomorrow Tulips_ at The Echoplex, Los Angeles, CA — September 2016
+Acetate collage slide projections for _Tomorrow Tulips_ at The Echoplex, Los Angeles, CA — September 2016
