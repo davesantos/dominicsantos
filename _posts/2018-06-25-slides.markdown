@@ -1,7 +1,0 @@
----
-title: slides
-date: 2018-06-25
-images:
- - slides015.jpg
- - slidescollage2_2014.jpg
----
