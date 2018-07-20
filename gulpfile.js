@@ -4,7 +4,6 @@ var gulp = require("gulp");
 var browserSync = require('browser-sync');
 var exec = require('child_process').exec
 
-
 var paths = {
   build: '_site',
   css: 'css',
