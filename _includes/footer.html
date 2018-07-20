@@ -13,8 +13,8 @@
 {% endif %}
 
 {% if site.env == 'production' or jekyll.environment == "production" %}
-<script src="{{ 'all.js' | prepend: 'js/' | prepend: site.baseurl }}"></script>
+<script src="{{ 'all.js' | prepend: '/js/' | prepend: site.baseurl }}"></script>
 {% else %}
-<script src="{{ 'all.js' | prepend: 'js/' }}"></script>
+<script src="{{ 'all.js' | prepend: '/js/' }}"></script>
 {% endif %}
 
