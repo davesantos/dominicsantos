@@ -8,17 +8,28 @@ layout: default
 <article class="article" itemscope itemtype="http://schema.org/BlogPosting">
   {% assign images = post.images %}
 
-  {% for image in images %}
-    {% if image contains "http://" or image contains "https://" %}
-    <img src="{{ image }}" alt=""/>
-    {% else %}
-      {% if site.env == 'production' or jekyll.environment == "production" %}
-      <img src="{{ image | prepend: image_asset_path | prepend: site.baseurl }}" alt=""/>
+
+  {% if images.size > 1 %}
+  <div class="carousel">
+  {% endif %}
+
+    {% for image in images %}
+    <div class="carousel-cell">
+      {% if image contains "http://" or image contains "https://" %}
+      <img src="{{ image }}" alt=""/>
       {% else %}
-      <img src="{{ image | prepend: image_asset_path }}" alt=""/>
+        {% if site.env == 'production' or jekyll.environment == "production" %}
+        <img src="{{ image | prepend: image_asset_path | prepend: site.baseurl }}" alt=""/>
+        {% else %}
+        <img src="{{ image | prepend: image_asset_path }}" alt=""/>
+        {% endif %}
       {% endif %}
-    {% endif %}
-  {% endfor %}
+    </div>
+    {% endfor %}
+
+  {% if images.size > 1 %}
+  </div>
+  {% endif %}
 
   <p>{{ post.content }}</p>
 </article>
