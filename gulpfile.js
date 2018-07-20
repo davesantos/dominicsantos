@@ -1,17 +1,22 @@
 'use strict';
 
-const gulp = require("gulp");
-const browserSync = require('browser-sync');
+var gulp = require("gulp");
+var browserSync = require('browser-sync');
 
 
-const paths = {
+var paths = {
   build: '_site',
   css: 'css',
   sass: ['css'],
   scripts: ['js']
 };
-// const HubRegistry = require("gulp-hub");
-// const hub = new HubRegistry(["gulp/tasks/*.js"]);
+
+var sassFiles = [
+  'css/**/*',
+  '_sass/**/*'
+]
+// var HubRegistry = require("gulp-hub");
+// var hub = new HubRegistry(["gulp/tasks/*.js"]);
 // gulp.registry(hub);
 
 
@@ -39,27 +44,28 @@ gulp.task("test", function(done) {
 //gulp.task("default", gulp.series("asdf", "console"));
 
 
-// const del = require("del");
-gulp.task("co``nsole", function(done) {
+// var del = require("del");
+gulp.task("console", function(done) {
   return console.log("Console task"), done();
 });
 
-// gulp.task("clean", function(done) {
-//   return del.sync("dist"), done();
-// });
 
-// gulp.task("watch", gulp.series("clean", "console"));
-
-
+gulp.task('rebuild', function(){
+ console.log('rebuilt');
+})
 
 gulp.task('serve', function(done) {
-
  browserSync.init({
    server: {
      baseDir: paths.build
    }
  });
+
+ gulp.watch(sassFiles, gulp.series('rebuild')).on('change', browserSync.reload);
+
  return console.log('Serve function ran'), done();
 });
+
+
 
 gulp.task('default', gulp.series('serve'));
