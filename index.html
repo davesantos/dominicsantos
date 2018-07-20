@@ -5,7 +5,7 @@ layout: default
 {% assign posts = site.posts | sort:"weight" %}
 {% for post in posts %}
 {% unless post.draft %}
-<article class="article" itemscope itemtype="http://schema.org/BlogPosting">
+<article class="article">
   {% assign images = post.images %}
 
 
