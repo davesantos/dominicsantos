@@ -4,6 +4,9 @@ weight: 10
 date: 2018-01-01
 images:
   - transportation-vessel-dominicsantos-1.jpg
+  - transportation-vessel-dominicsantos-2.jpg
+  - transportation-vessel-dominicsantos-3.jpg
+  - transportation-vessel-dominicsantos-4.jpg
 ---
 
 “Transportation Vessels” 2018. Mixed media. 37x17x13”
