@@ -12,7 +12,6 @@ images:
   - transportation-vessel-dominicsantos-3-2.jpg
   - transportation-vessel-dominicsantos-4.jpg
   - transportation-vessel-dominicsantos-4-1.jpg
-  - transportation-vessel-dominicsantos-4-2.jpg
 ---
 
 “Transportation Vessels” 2018. Mixed media. 37x17x13in.

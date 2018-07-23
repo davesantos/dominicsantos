@@ -9,4 +9,4 @@ images:
   - stage-visuals-tomorrows-tulips-dominicsantos-4.jpg
   - stage-visuals-tomorrows-tulips-dominicsantos-5.jpg
 ---
-Art Direction and Stage visuals for_Tomorrows Tulips_. — 2013-2016
+Art Direction and Stage visuals for _Tomorrows Tulips_. — 2013-2016
