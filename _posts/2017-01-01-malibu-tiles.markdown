@@ -9,4 +9,4 @@ images:
   - malibu-tiles-dominicsantos-4.jpg
   - malibu-tiles-dominicsantos-5.jpg
 ---
-“Malibu Tiles” Acetate collage slide projections — Documentation of Hollywood Studio Spring 2017.
+“Malibu Tiles” Acetate collage slide projections. Studio documentation. — December 2016

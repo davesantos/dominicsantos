@@ -7,4 +7,4 @@ images:
   - collage-slides-dominicsantos-2.jpg
   - collage-slides-dominicsantos-3.jpg
 ---
-Acetate collage slide projections for the band _Allah Las_ — North American Tour 2017
+Acetate collage slide projections for _Allah Las_. — North American Tour 2017
