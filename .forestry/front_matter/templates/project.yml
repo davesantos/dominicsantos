@@ -8,6 +8,12 @@ fields:
     required: true
   label: Title
   name: title
+- type: number
+  name: weight
+  label: Weight
+  config:
+    required: true
+  default: '1'
 - type: textarea
   label: Description
   name: description
