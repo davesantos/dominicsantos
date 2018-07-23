@@ -11,7 +11,7 @@ images:
   - transportation-vessel-dominicsantos-3-1.jpg
   - transportation-vessel-dominicsantos-3-2.jpg
   - transportation-vessel-dominicsantos-4.jpg
-  - transportation-vessel-dominicsantos4-1.jpg
+  - transportation-vessel-dominicsantos-4-1.jpg
   - transportation-vessel-dominicsantos-4-2.jpg
 ---
 
