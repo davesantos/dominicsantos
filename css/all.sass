@@ -78,10 +78,9 @@ nav ul
     display: inline-block
 
 .caption
-  @extend %widthSize
   text-transform: uppercase
-  justify-content: center
-  flex-direction: column
+  width: 80%
+  margin: auto
   text-align: center
 
 %widthSize
@@ -114,3 +113,13 @@ nav ul
 .carousel-cell
   width: 100%
   height: auto
+
+
+@media only screen and (min-width: 768px)
+  .main
+    padding-left: 8vw
+    padding-right: 8vw
+
+
+// @media only screen and (min-width: 1030px)
+// @media only screen and (min-width: 1240px)
