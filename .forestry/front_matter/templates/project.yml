@@ -1,0 +1,21 @@
+---
+label: Project
+hide_body: false
+is_partial: false
+fields:
+- type: text
+  config:
+    required: true
+  label: Title
+  name: title
+- type: textarea
+  label: Description
+  name: description
+  config:
+    required: false
+    wysiwyg: true
+    schema:
+      format: markdown
+- type: image_gallery
+  name: images
+  label: Images
