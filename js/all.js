@@ -4,7 +4,8 @@ for ( var i = 0, total = galleryElems.length; i < total; i++ ) {
   var galleryElem = galleryElems[i];
 
   var flkty = new Flickity( galleryElem, {
-    prevNextButtons: false
+    prevNextButtons: false,
+    adaptiveHeight: true
   });
 
   flkty.on( 'staticClick', function( event, pointer, cellElement, cellIndex ) {
