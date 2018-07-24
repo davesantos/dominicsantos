@@ -2,11 +2,11 @@
 layout: default
 ---
 {% assign image_asset_path = '/uploads/'%}
-{% assign posts = site.posts | sort:"weight" %}
-{% for post in posts %}
-{% unless post.draft %}
+{% assign projects = site.projects | sort:"weight" %}
+{% for project in projects %}
+{% unless project.draft %}
 <article class="article">
-  {% assign images = post.images %}
+  {% assign images = project.images %}
 
   {% if images.size > 1 %}
   <div class="carousel">
@@ -30,7 +30,7 @@ layout: default
   </div>
   {% endif %}
 
-  <div class="caption">{{ post.content }}</div>
+  <div class="caption">{{ project.content }}</div>
 </article>
 {% endunless %}
 {% endfor %}

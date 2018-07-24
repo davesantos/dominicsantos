@@ -37,12 +37,12 @@ plugins:
   - jekyll-sitemap
 
 collections:
-  posts:
-    title: Posts
-    output: true
   uploads:
     title: Uploads
     output: false
+  projects:
+    output: false
+    permalink: /work/:path/
 
 defaults:
 - scope:
@@ -50,6 +50,12 @@ defaults:
     type: pages
   values:
     layout: page
+- scope:
+    path: "projects"
+    type: "projects"
+  values:
+    weight: 999
+
 
 # Dependancies
 
