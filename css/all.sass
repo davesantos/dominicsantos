@@ -59,7 +59,7 @@ body
   // font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"
   // font-family: TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, serif
   font-family: 'Oranienbaum', serif
-
+  text-transform: uppercase
 
 a
   text-decoration: none
@@ -83,21 +83,16 @@ nav ul
     display: inline-block
 
 .caption
-  text-transform: uppercase
   width: 80%
   margin: auto
   text-align: center
 
-%widthSize
-  display: flex
-  padding-left: modular-scale(-5)
-  padding-right: modular-scale(-5)
-  width: 100%
-
 .header
   @extend %widthSize
-  height: 20vh
   padding-top: modular-scale(1)
+  position: fixed
+  background: white
+  z-index: 999
 
 .main
   // @extend %widthSize
@@ -113,14 +108,32 @@ nav ul
   @extend %widthSize
   height: 10vh
 
-// Carousel
+//------------------------------------------------------------
+//
+//  Carousel
+//
+//------------------------------------------------------------
 
 .carousel-cell
   width: 100%
   height: auto
 
+//------------------------------------------------------------
+//
+//  Placeholders
+//
+//------------------------------------------------------------
+
+%widthSize
+  display: flex
+  padding-left: modular-scale(-5)
+  padding-right: modular-scale(-5)
+  width: 100%
 
 @media only screen and (min-width: 768px)
+  .header
+    padding-left: 8vw
+    padding-right: 8vw
   .main
     padding-left: 8vw
     padding-right: 8vw
@@ -128,3 +141,5 @@ nav ul
 
 // @media only screen and (min-width: 1030px)
 // @media only screen and (min-width: 1240px)
+
+
