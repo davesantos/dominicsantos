@@ -1,6 +1,6 @@
 ---
 title: Party at Sunday
-weight: 90
+weight: 80
 date: 2016-07-01
 images:
   - party-at-sunday-dominicsantos.jpg

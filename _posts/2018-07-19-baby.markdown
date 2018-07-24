@@ -1,6 +1,6 @@
 ---
 title: Baby
-weight: 80
+weight: 120
 date: 2014-08-01
 images:
   - baby-dominicsantos.jpg

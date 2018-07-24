@@ -1,6 +1,6 @@
 ---
 title: Collage Slides
-weight: 120
+weight: 70
 date: 2017-01-01
 images:
   - collage-slides-dominicsantos-1.jpg

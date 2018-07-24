@@ -1,6 +1,6 @@
 ---
 title: Malibu Tiles
-weight: 100
+weight: 90
 date: 2017-01-01
 images:
   - malibu-tiles-dominicsantos-1.jpg
