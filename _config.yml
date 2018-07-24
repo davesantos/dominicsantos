@@ -52,6 +52,11 @@ defaults:
   values:
     weight: 999
 
+compress_html:
+  clippings: all
+  comments:  ["<!-- ", " -->"]
+  endings:   all
+
 # Dependancies
 
 
