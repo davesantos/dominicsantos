@@ -26,7 +26,7 @@ for ( var i = 0, total = galleryElems.length; i < total; i++ ) {
 
 
 var lastFixPos = 0;
-var threshold = 100; //sensitivity on scrolling
+var threshold = 150; //sensitivity on scrolling
 var theHead = document.querySelector(".header");
 
 window.addEventListener("scroll", scrollEffect);
