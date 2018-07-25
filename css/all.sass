@@ -94,8 +94,23 @@ nav ul
   background: white
   z-index: 999
 
+.header
+  display: flex
+  align-items: center
+  height: 80px
+  transition: top 250ms ease
+  position: fixed
+  width: 100%
+  top: 0
+  background-color: #fff
+  overflow: hidden
+
+.hide
+  top: -80px
+
 .main
   // @extend %widthSize
+  margin-top: 8em
 
 .article
   display: block

@@ -17,12 +17,39 @@ for ( var i = 0, total = galleryElems.length; i < total; i++ ) {
     if ( cellIndex == this.selectedIndex ) {
       this.next( true );
     } else {
-      this.on( 'select', cellIndex);
+      // this.on( 'select', cellIndex); // WHAT IS THIS!!!!
       console.log(cellIndex)
     }
 
   });
 }
+
+
+var lastFixPos = 0;
+var threshold = 100; //sensitivity on scrolling
+var theHead = document.querySelector(".header");
+
+window.addEventListener("scroll", scrollEffect);
+
+function scrollEffect() {
+  var st = window.scrollY;
+  var diff = Math.abs(window.scrollY - lastFixPos);
+  if (diff > threshold || st < 100) {
+    if (st < lastFixPos) {
+      if (theHead.classList)
+        theHead.classList.remove('hide');
+      else
+        theHead.className = theHead.className.replace(new RegExp('(^|\\b)' + className.split(' ').join('|') + '(\\b|$)', 'gi'), ' ');
+    }
+    lastFixPos = st;
+  } else if (st > lastFixPos) {
+    if (theHead.classList)
+      theHead.classList.add('hide');
+    else
+      theHead.className += ' ' + className;
+  }
+}
+
 
 // flkty.on( 'staticClick', function( event, pointer, cellElement, cellIndex ) {
 //   if ( !cellElement ) {
