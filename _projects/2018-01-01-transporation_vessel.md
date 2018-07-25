@@ -5,7 +5,6 @@ date: 2018-01-01
 images:
   - transportation-vessel-dominicsantos-3.jpg
   - transportation-vessel-dominicsantos-3-1.jpg
-  - transportation-vessel-dominicsantos-3-2.jpg
   - transportation-vessel-dominicsantos-2.jpg
   - transportation-vessel-dominicsantos-2-1.jpg
   - transportation-vessel-dominicsantos-1.jpg
