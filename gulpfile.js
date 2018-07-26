@@ -58,12 +58,6 @@ gulp.task('jekyll-build', function(cb) {
   });
 });
 
-// // var del = require("del");
-// gulp.task("console", function(done) {
-//   return console.log("Console task"), done();
-// });
-
-
 gulp.task('jekyll-rebuild', gulp.series('jekyll-build', function(done) {
   browserSync.reload(), done();
 }));
