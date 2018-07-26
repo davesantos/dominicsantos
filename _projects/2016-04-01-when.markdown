@@ -3,6 +3,6 @@ title: When
 weight: 30
 date: 2016-04-01
 images:
-  - when-dominicsantos.jpg
+  - when-dominicsantos
 ---
 Music Video Direction with Tin Ojeda. “When” by _Tomorrows Tulips_. — April 2016

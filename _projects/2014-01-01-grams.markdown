@@ -3,6 +3,6 @@ title: Grams
 weight: 60
 date: 2014-01-01
 images:
-  - grams-dominicsantos.jpg
+  - grams-dominicsantos
 ---
 “Grams” 2014. Inkjet photos, plastic ziplock bag. 1 x 1 in.
