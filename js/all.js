@@ -5,7 +5,7 @@ for ( var i = 0, total = galleryElems.length; i < total; i++ ) {
 
   var flkty = new Flickity( galleryElem, {
     prevNextButtons: false,
-    lazyLoad: true,
+    lazyLoad: 2,
     adaptiveHeight: true
   });
 
