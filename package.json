@@ -1,23 +1,28 @@
 {
-  "name": "jekyll-starter",
+  "name": "dominicsantos",
   "author": "Dave Santos <info@davesantos.com> (https://davesantos.com)",
   "devDependencies": {
-    "browser-sync": "^2.24.5",
+    "browser-sync": "^2.24.6",
     "child_process": "^1.0.2",
     "gulp": "^4.0.0",
     "gulp-clean-css": "3.9.3",
     "gulp-prettify": "0.5.0",
     "gulp-remove-empty-lines": "0.1.0",
     "gulp-sass": "4.0.1",
-    "gulp-uglify": "3.0.0"
+    "gulp-uglify": "3.0.0",
+    "webpack": "^4.16.3",
+    "webpack-cli": "^3.1.0"
   },
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/davesantos/jekyll-starter.git"
+    "url": "https://github.com/davesantos/dominicsantos.git"
   },
   "dependencies": {
     "hoek": "^5.0.3",
     "minimatch": "^3.0.4"
+  },
+  "scripts": {
+    "build": "webpack --config webpack.config.js"
   }
 }
