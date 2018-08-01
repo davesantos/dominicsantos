@@ -1,7 +1,6 @@
 // import $ from 'jquery';
 var Flickity = require('flickity');
 
-
 WebFontConfig = {
   google: { families: [
     'Oranienbaum::latin'
