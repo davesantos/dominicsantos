@@ -23,6 +23,8 @@
     "minimatch": "^3.0.4"
   },
   "scripts": {
-    "build": "webpack --config webpack.config.js"
+    "dev": "webpack --mode development",
+    "build": "webpack --mode production"
+
   }
 }
