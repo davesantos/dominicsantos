@@ -20,11 +20,12 @@
   },
   "dependencies": {
     "hoek": "^5.0.3",
+    "jquery": "^3.3.1",
     "minimatch": "^3.0.4"
   },
   "scripts": {
+    "start": "node_modules/.bin/webpack --watch",
     "dev": "webpack --mode development",
     "build": "webpack --mode production"
-
   }
 }

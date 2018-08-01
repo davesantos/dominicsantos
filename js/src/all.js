@@ -1,3 +1,7 @@
+// import $ from 'jquery';
+var Flickity = require('flickity');
+
+
 WebFontConfig = {
   google: { families: [
     'Oranienbaum::latin'
@@ -13,7 +17,6 @@ WebFontConfig = {
   var s = document.getElementsByTagName('script')[0];
   s.parentNode.insertBefore(wf, s);
 })();
-
 
 var galleryElems = document.querySelectorAll('.carousel');
 
@@ -41,7 +44,6 @@ for ( var i = 0, total = galleryElems.length; i < total; i++ ) {
   });
 }
 
-
 var lastFixPos = 0;
 var threshold = 150; //sensitivity on scrolling
 var theHead = document.querySelector(".header");
@@ -66,7 +68,6 @@ function scrollEffect() {
       theHead.className += ' ' + className;
   }
 }
-
 
 // flkty.on( 'staticClick', function( event, pointer, cellElement, cellIndex ) {
 //   if ( !cellElement ) {

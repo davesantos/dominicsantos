@@ -32,10 +32,4 @@
   <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}">
   {% endcomment %}
 
-  {% if site.env == 'production' or jekyll.environment == "production" %}
-  <script src="{{ 'flickity.pkgd.min.js' | prepend: '/js/vendor/' | prepend: site.baseurl | replace: '//', '/' }}"></script>
-  {% else %}
-  <script src="{{ 'flickity.pkgd.min.js' | prepend: '/js/vendor/' | replace: '//', '/' }}"></script>
-  {% endif %}
-
 </head>
