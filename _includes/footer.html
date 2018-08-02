@@ -5,8 +5,8 @@
 </footer>
 
 {% if site.env == 'production' or jekyll.environment == "production" %}
-<script src="{{ 'bundle.js' | prepend: '/js/' | prepend: site.baseurl }}"></script>
+<script src="{{ 'bundle.js' | prepend: '/js/dist/' | prepend: site.baseurl }}"></script>
 {% else %}
-<script src="{{ 'bundle.js' | prepend: '/js/' }}"></script>
+<script src="{{ 'bundle.js' | prepend: '/js/dist/' }}"></script>
 {% endif %}
 

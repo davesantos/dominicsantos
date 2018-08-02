@@ -4,7 +4,7 @@ module.exports =  {
   mode: 'none',
   entry: './main.js',
   output: {
-    path: path.join(__dirname, 'js'),
+    path: path.join(__dirname, 'js', 'dist'),
     filename: 'bundle.js'
   },
   module: {

@@ -36,9 +36,8 @@ for ( var i = 0, total = galleryElems.length; i < total; i++ ) {
       // go to next if current cell selected
     if ( cellIndex == this.selectedIndex ) {
       this.next( true );
-    // } else {
-    //   flkty.on( 'select', cellIndex);
-    // }
+    } else {
+      flkty.on( 'select', cellIndex);
     }
   });
 }
