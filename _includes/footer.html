@@ -1,6 +1,5 @@
 <footer class="footer">
 
-
   <div id="info">
     {% include info.html %}
   </div>
@@ -8,6 +7,7 @@
 
 </footer>
 
+<script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
 {% if site.env == 'production' or jekyll.environment == "production" %}
 <script src="{{ 'bundle.js' | prepend: '/js/dist/' | prepend: site.baseurl }}"></script>
 {% else %}
