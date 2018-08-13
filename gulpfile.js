@@ -18,7 +18,9 @@ var sassFiles = [
 ]
 
 var jsFiles = [
-  'js/**/*.js'
+  'js/src/*.js',
+  'js/vendor/*.js',
+  'js/*.js'
 ]
 
 var jekyllFiles = [
@@ -36,6 +38,13 @@ function errorHandler(error) {
   browserSync.notify('Error');
 }
 
+function webpackBuild(cb) {
+  exec('npm run build', function(err, stdout, stderr) {
+    console.log(stdout);
+    console.log(stderr);
+    cb(err);
+  });
+}
 
 gulp.task('sass', function () {
   var stream = gulp.src(sassFiles)
@@ -44,11 +53,11 @@ gulp.task('sass', function () {
   return stream;
 });
 
-gulp.task('js', function() {
-  var stream = gulp.src(jsFiles)
-    .pipe(gulp.dest(paths.build + '/' + paths.scripts))
-  return stream;
-});
+// gulp.task('js', function() {
+//   return gulp.src(jsFiles)
+//     .pipe(gulp.dest(paths.build + '/' + paths.scripts))
+//   return stream;
+// });
 
 gulp.task('jekyll-build', function(cb) {
   exec('bundle exec jekyll build', function(err, stdout, stderr) {
@@ -57,6 +66,8 @@ gulp.task('jekyll-build', function(cb) {
     cb(err);
   });
 });
+
+gulp.task('webpack:build', webpackBuild );
 
 gulp.task('jekyll-rebuild', gulp.series('jekyll-build', function(done) {
   browserSync.reload(), done();
@@ -71,7 +82,7 @@ gulp.task('serve', function(done) {
  });
 
  gulp.watch(sassFiles, gulp.parallel('jekyll-rebuild')).on('change', browserSync.reload);
- gulp.watch(jsFiles, gulp.parallel('js')).on('change', browserSync.reload);
+ gulp.watch(jsFiles, gulp.parallel('webpack:build')).on('change', browserSync.reload);
  gulp.watch(jekyllFiles, gulp.parallel('jekyll-rebuild')).on('all', browserSync.reload);
  return console.log('Serve function ran'), done();
 });

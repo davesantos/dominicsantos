@@ -1,12 +1,16 @@
 <footer class="footer">
 
+  <div id="info">
+    {% include info.html %}
+  </div>
   <p>Copyright &copy; 2016—2018 {{ site.title }} - All Rights Reserved</p>
 
 </footer>
 
+<script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
 {% if site.env == 'production' or jekyll.environment == "production" %}
-<script src="{{ 'bundle.js' | prepend: '/js/' | prepend: site.baseurl }}"></script>
+<script src="{{ 'bundle.js' | prepend: '/js/dist/' | prepend: site.baseurl }}"></script>
 {% else %}
-<script src="{{ 'bundle.js' | prepend: '/js/' }}"></script>
+<script src="{{ 'bundle.js' | prepend: '/js/dist/' }}"></script>
 {% endif %}
 

@@ -1,5 +1,12 @@
 // import $ from 'jquery';
 var Flickity = require('flickity');
+var scroll = new SmoothScroll('a[href*="#"]');
+
+//------------------------------------------------------------
+//
+//  Google Webfont Loader
+//
+//------------------------------------------------------------
 
 WebFontConfig = {
   google: { families: [
@@ -16,6 +23,12 @@ WebFontConfig = {
   var s = document.getElementsByTagName('script')[0];
   s.parentNode.insertBefore(wf, s);
 })();
+
+//------------------------------------------------------------
+//
+//  Flickity
+//
+//------------------------------------------------------------
 
 var galleryElems = document.querySelectorAll('.carousel');
 
@@ -36,9 +49,8 @@ for ( var i = 0, total = galleryElems.length; i < total; i++ ) {
       // go to next if current cell selected
     if ( cellIndex == this.selectedIndex ) {
       this.next( true );
-    // } else {
-    //   flkty.on( 'select', cellIndex);
-    // }
+    } else {
+      flkty.on( 'select', cellIndex);
     }
   });
 }
@@ -68,14 +80,9 @@ function scrollEffect() {
   }
 }
 
-// flkty.on( 'staticClick', function( event, pointer, cellElement, cellIndex ) {
-//   if ( !cellElement ) {
-//     return;
-//   }
-//     // go to next if current cell selected
-//   if ( cellIndex == flkty.selectedIndex ) {
-//     flkty.next( true );
-//   } else {
-//     $carousel.flickity( 'select', cellIndex );
-//   }
-// });
+
+//------------------------------------------------------------
+//
+//  Scroll Smooth
+//
+//------------------------------------------------------------

@@ -52,7 +52,7 @@
 
 body
   opacity: 0
-  font-family: 'Oranienbaum', serif
+  font-family: Bodoni, 'Oranienbaum', serif
 
 a
   text-decoration: none
@@ -81,7 +81,7 @@ nav ul
   text-align: center
 
 .header
-  @extend %widthSize
+  @extend %flexWidth
   padding-top: modular-scale(1)
   position: fixed
   background: white
@@ -107,7 +107,7 @@ nav ul
   top: -80px
 
 .main
-  // @extend %widthSize
+  // @extend %flexWidth
   margin-top: 8em
   text-transform: uppercase
 
@@ -117,16 +117,21 @@ nav ul
   margin-bottom: 5rem
 
 .footer
-  @extend %widthSize
-  justify-content: center
-  align-items: center
-  height: 10vh
+  max-width: 1080px
+  margin: 10em auto
+  padding-left: modular-scale(-5)
+  padding-right: modular-scale(-5)
+
 
 //------------------------------------------------------------
 //
 //  Carousel
 //
 //------------------------------------------------------------
+
+.carousel
+  max-width: 1080px
+  margin: 0 auto
 
 .carousel-cell
   width: 100%
@@ -138,7 +143,7 @@ nav ul
 //
 //------------------------------------------------------------
 
-%widthSize
+%flexWidth
   display: flex
   padding-left: modular-scale(-5)
   padding-right: modular-scale(-5)
