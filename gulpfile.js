@@ -73,18 +73,18 @@ gulp.task('jekyll-rebuild', gulp.series('jekyll-build', function(done) {
   browserSync.reload(), done();
 }));
 
-gulp.task('serve', function(done) {
+gulp.task('serve', gulp.series('jekyll-build', function(done) {
 
- browserSync.init({
+  browserSync.init({
    server: {
      baseDir: paths.build
    }
- });
+  });
 
- gulp.watch(sassFiles, gulp.parallel('jekyll-rebuild')).on('change', browserSync.reload);
- gulp.watch(jsFiles, gulp.parallel('webpack:build')).on('change', browserSync.reload);
- gulp.watch(jekyllFiles, gulp.parallel('jekyll-rebuild')).on('all', browserSync.reload);
- return console.log('Serve function ran'), done();
-});
+   gulp.watch(sassFiles, gulp.parallel('jekyll-rebuild')).on('change', browserSync.reload);
+   gulp.watch(jsFiles, gulp.parallel('webpack:build')).on('change', browserSync.reload);
+   gulp.watch(jekyllFiles, gulp.parallel('jekyll-rebuild')).on('all', browserSync.reload);
+   return console.log('Serve function ran'), done();
+}));
 
 gulp.task('default', gulp.series('serve'));
