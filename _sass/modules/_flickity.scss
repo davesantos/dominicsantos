@@ -118,7 +118,7 @@ https://flickity.metafizzy.co
     width: 8px;
     height: 8px;
     margin: 0 5px;
-    background: #333;
+    background: map-get($colors, 'text');
     border-radius: 50%;
     opacity: 0.25;
     cursor: pointer;

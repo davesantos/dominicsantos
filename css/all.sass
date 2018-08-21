@@ -24,7 +24,6 @@
 @import 'modules/mixins'
 @import 'modules/flickity'
 
-
 //------------------------------------------------------------
 //
 //  Placeholders
@@ -36,7 +35,6 @@
   padding-left: modular-scale(-5)
   padding-right: modular-scale(-5)
   width: 100%
-
 
 %upperCasing
   text-transform: uppercase
@@ -70,10 +68,13 @@ body
   flex-direction: column
   font-family: Bodoni, 'Oranienbaum', serif
   opacity: 0
+  background: map-get($colors, 'background')
+  color: map-get($colors, 'text')
 
 a
   text-decoration: none
-  color: #000
+  color: map-get($colors, 'text')
+
 
 img, video, object, embed
   max-width: 100%
@@ -103,6 +104,7 @@ nav ul
   @extend %upperCasing
   align-items: center
   display: flex
+  font-family: sans-serif
   height: 80px
   justify-content: space-between
   overflow: hidden
@@ -113,11 +115,9 @@ nav ul
   width: 100%
   z-index: 999
   h1
+    font-weight: bold
     font-size: inherit
-    font-weight: normal
-    font-family: sans-serif
-    font-weight: strong
-
+    letter-spacing: 0.05rem
 
 .hide
   top: -80px
