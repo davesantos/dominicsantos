@@ -4,6 +4,6 @@ weight: 120
 date: 2014-08-01
 images:
   - baby-dominicsantos
-permalink: https://vimeo.com/217094076
+permalink: https://youtu.be/ANlwsJnvmaQ
 ---
-Music Video Direction with Alex Knost and Taylor Bonin. “Baby & Glued to You” by _Tomorrows Tulips_. — August 2014
+Music Video Direction with Alex Knost and Taylor Bonin. “Baby & Glued to You” by _Tomorrows Tulips_. [Watch here](https://youtu.be/ANlwsJnvmaQ). — August 2014
