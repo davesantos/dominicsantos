@@ -12,8 +12,7 @@
 
 @import 'base/bourbon/bourbon'
 @import 'base/normalize'
-
-// @import 'base/variables'
+@import 'base/variables'
 // @import 'base/syntax-highlighting'
 
 //------------------------------------------------------------
@@ -113,15 +112,20 @@ nav ul
   // @extend %flexWidth
   margin-top: 8em
   flex: 1 0 auto
-  text-transform: uppercase
   a
-    cursor: alias
+    cursor: alia
+    box-shadow: inset 0 -0.25rem map-get($colors, 'soft')
+    transition: box-shadow 250ms ease
+    &:hover
+      box-shadow: inset 0 -1.7rem map-get($colors, 'soft')
 
 .article
   display: block
+  text-transform: uppercase
   margin-bottom: 5rem
 
 #info
+  text-align: center
   max-width: 1080px
   margin: 10em auto
   padding-left: modular-scale(-5)

@@ -2,7 +2,10 @@
 //
 //  Variables
 //
+//  USAGE: map-get($colors, 'soft')
+//
 //------------------------------------------------------------
+
 
 // Bourbon (Overwrite global Bourbon)
 $bourbon: (
@@ -17,7 +20,7 @@ $colors: (
   'background'   : lemonchiffon,
   'hover'        : #47FC00,
   'text'         : #000,
-  'soft'         : rgba(0,0,0, 0.25),
+  'soft'         : rgba(0,0,0, 0.1),
   'anchor'       : #000,
   'gray'         : #828282,
   'code'         : rgba(0, 0, 0, 0.05)
