@@ -28,6 +28,6 @@
   "scripts": {
     "start": "node_modules/.bin/webpack --watch",
     "dev": "webpack --mode development",
-    "build": "webpack --mode production"
+    "build": "webpack --mode production && cp js/dist/bundle.js _site/js/dist"
   }
 }
