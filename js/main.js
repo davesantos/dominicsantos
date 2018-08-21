@@ -55,6 +55,12 @@ for ( var i = 0, total = galleryElems.length; i < total; i++ ) {
   });
 }
 
+//------------------------------------------------------------
+//
+//  Scroll Header effect
+//
+//------------------------------------------------------------
+
 var lastFixPos = 0;
 var threshold = 150; //sensitivity on scrolling
 var theHead = document.querySelector(".header");
@@ -83,6 +89,14 @@ function scrollEffect() {
 
 //------------------------------------------------------------
 //
-//  Scroll Smooth
+//  External Links
 //
 //------------------------------------------------------------
+
+function externalLinks() {
+  for(var c = document.getElementsByTagName("a"), a = 0;a < c.length;a++) {
+    var b = c[a];
+    b.getAttribute("href") && b.hostname !== location.hostname && (b.target = "_blank")
+  }
+};
+externalLinks();
