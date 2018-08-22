@@ -96,6 +96,7 @@ nav ul
 
 .caption
   width: 80%
+  max-width: 1080px
   margin: auto
   text-align: center
 
@@ -117,18 +118,18 @@ nav ul
     font-weight: bold
     font-size: inherit
     letter-spacing: 0.05rem
-    border: 2px map-get($colors, 'text') solid
-    padding: 0.1rem 1.5rem
+    a
+      box-shadow: inset 0 0 0 2px map-get($colors, 'text')
+      padding: 0.1rem 1.5rem
 
 .hide
   top: -80px
 
 .main
-  // @extend %flexWidth
   margin-top: 4em
   flex: 1 0 auto
   a
-    cursor: alia
+    cursor: alias
     box-shadow: inset 0 -0.25rem map-get($colors, 'soft')
     transition: box-shadow 250ms ease
     &:hover
