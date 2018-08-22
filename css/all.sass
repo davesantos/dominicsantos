@@ -111,7 +111,7 @@ nav ul
   padding-top: modular-scale(1)
   position: fixed
   top: 0
-  transition: top 250ms ease
+  transition: top 250ms linear
   width: 100%
   z-index: 999
   h1
@@ -130,7 +130,7 @@ nav ul
   flex: 1 0 auto
   a
     cursor: alias
-    box-shadow: inset 0 -0.04rem map-get($colors, 'text')
+    box-shadow: inset 0 -1px map-get($colors, 'text')
     transition: box-shadow 100ms ease
     &:hover
       box-shadow: inset 0 -1.7rem map-get($colors, 'text')
