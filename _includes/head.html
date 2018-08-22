@@ -21,7 +21,7 @@
   {% assign asset_path = site.assets.asset_path %}
 
   {% if site.env == 'production' or jekyll.environment == "production" %}
-  <link type="text/css" rel="stylesheet" href="{{ 'all.css' | prepend: '/css/' | prepend: site.url | replace: '//', '/' }}">
+  <link type="text/css" rel="stylesheet" href="{{ 'all.css' | prepend: '/css/' | replace: '//', '/' }}">
   {% else %}
   <link type="text/css" rel="stylesheet" href="{{ 'all.css' | prepend: '/css/' | replace: '//', '/' }}">
   {% endif %}
