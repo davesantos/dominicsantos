@@ -1,6 +1,7 @@
 ---
 title: Dominic Santos
-description: Foobar
+description: Dominic Santos is a multidisciplinary artist and director based in Los Angeles
+url: https://dominicsantos.com
 markdown: kramdown
 permalink: /posts/:title
 exclude: ["bower_components", "node_modules", "config.rb", "gulpfile.js", "package.json","*.sublime-project", "*.sublime-workspace", "*.log", "css/_breakpoints", "LICENSE", "README.md"]
