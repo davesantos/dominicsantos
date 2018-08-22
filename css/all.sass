@@ -105,7 +105,6 @@ nav ul
   align-items: center
   display: flex
   font-family: sans-serif
-  height: 80px
   justify-content: space-between
   overflow: hidden
   padding-top: modular-scale(1)
@@ -118,13 +117,15 @@ nav ul
     font-weight: bold
     font-size: inherit
     letter-spacing: 0.05rem
+    border: 2px map-get($colors, 'text') solid
+    padding: 0.1rem 1.5rem
 
 .hide
   top: -80px
 
 .main
   // @extend %flexWidth
-  margin-top: 8em
+  margin-top: 4em
   flex: 1 0 auto
   a
     cursor: alia
