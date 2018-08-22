@@ -22,6 +22,14 @@
 
   {% if site.env == 'production' or jekyll.environment == "production" %}
   <link type="text/css" rel="stylesheet" href="{{ 'all.css' | prepend: '/css/' | replace: '//', '/' }}">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-4820200-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-4820200-1');
+  </script>
   {% else %}
   <link type="text/css" rel="stylesheet" href="{{ 'all.css' | prepend: '/css/' | replace: '//', '/' }}">
   {% endif %}
