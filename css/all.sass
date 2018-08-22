@@ -130,10 +130,11 @@ nav ul
   flex: 1 0 auto
   a
     cursor: alias
-    box-shadow: inset 0 -0.25rem map-get($colors, 'soft')
-    transition: box-shadow 250ms ease
+    box-shadow: inset 0 -0.04rem map-get($colors, 'text')
+    transition: box-shadow 100ms ease
     &:hover
-      box-shadow: inset 0 -1.7rem map-get($colors, 'soft')
+      box-shadow: inset 0 -1.7rem map-get($colors, 'text')
+      color: map-get($colors, 'background')
 
 .article
   @extend %upperCasing
