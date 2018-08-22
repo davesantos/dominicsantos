@@ -6,7 +6,8 @@ markdown: kramdown
 permalink: /posts/:title
 exclude: ["bower_components", "node_modules", "config.rb", "gulpfile.js", "package.json","*.sublime-project", "*.sublime-workspace", "*.log", "css/_breakpoints", "LICENSE", "README.md"]
 exclude: ["Gemfile", "modernizr-config.json", "*.lock", "bower_components", "node_modules", "config.rb", "gulpfile.js", "package.json", "package-lock.json","*.sublime-project", "*.sublime-workspace", "*.log", "LICENSE", "README.md"]
-baseurl: /dominicsantos
+# baseurl: dominicsantos
+
 # Don't forget trailing slash or it won't work on test server
 permalink: :year/:title/
 sass:
@@ -57,9 +58,3 @@ compress_html:
   clippings: all
   comments:  ["<!-- ", " -->"]
   endings:   all
-
-# Dependancies
-
-
-
-
