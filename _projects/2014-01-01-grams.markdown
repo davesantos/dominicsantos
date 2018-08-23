@@ -1,8 +1,9 @@
 ---
 title: Grams
-weight: 60
-date: 2014-01-01
+weight: 150
+date: 2014-01-01 00:00:00 +0000
 images:
-  - grams-dominicsantos
+- grams-dominicsantos
+
 ---
 “Grams” 2014. Inkjet photos, plastic ziplock bag. 1 x 1 in.
