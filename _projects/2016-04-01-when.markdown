@@ -1,10 +1,11 @@
 ---
 title: When
-weight: 30
-date: 2016-04-01
+weight: 40
+date: 2016-04-01 00:00:00 +0000
 images:
-  - when-dominicsantos
+- when-dominicsantos
 permalink:
-  - https://youtu.be/QbtYLCNbdVY
+- https://youtu.be/QbtYLCNbdVY
+
 ---
 Music Video Direction with Tin Ojeda. “When” by _Tomorrows Tulips_. [Watch here](https://youtu.be/QbtYLCNbdVY). — April 2016
