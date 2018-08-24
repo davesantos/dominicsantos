@@ -1,6 +1,6 @@
 ---
 title: Burst
-weight: 20
+weight: 40
 date: 2014-01-01 00:00:00 +0000
 images:
 - burst-dominicsantos

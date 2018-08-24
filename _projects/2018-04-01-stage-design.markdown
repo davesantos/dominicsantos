@@ -1,6 +1,6 @@
 ---
 title: Stage Design
-weight: 30
+weight: 80
 date: 2018-04-01 00:00:00 +0000
 images:
 - stage-design-allah-las-dominicsantos
