@@ -81,9 +81,10 @@ gulp.task('serve', gulp.series('jekyll-build', function(done) {
    }
   });
 
-   gulp.watch(sassFiles, gulp.parallel('jekyll-rebuild')).on('change', browserSync.reload);
-   gulp.watch(jsFiles, gulp.parallel('webpack:build')).on('change', browserSync.reload);
-   gulp.watch(jekyllFiles, gulp.parallel('jekyll-rebuild')).on('all', browserSync.reload);
+   gulp.watch(sassFiles).on('change', gulp.series('jekyll-build'));
+   gulp.watch(jsFiles).on('change', gulp.series('webpack:build'));
+   gulp.watch(jekyllFiles).on('all', gulp.series('jekyll-build'));
+   gulp.watch(paths.build + '/**/*').on('all', browserSync.reload);
    return console.log('Serve function ran'), done();
 }));
 
