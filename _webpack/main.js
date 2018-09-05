@@ -1,7 +1,6 @@
-// import $ from 'jquery';
 const Flickity = require('flickity');
-const scroll = new SmoothScroll('a[href*="#"]');
 const WebFont = require('webfontloader');
+const scroll = new SmoothScroll('a[href*="#"]');
 //------------------------------------------------------------
 //
 //  Google Webfont Loader
@@ -54,7 +53,9 @@ let lastFixPos = 0;
 const threshold = 150; //sensitivity on scrolling
 const theHead = document.querySelector(".header");
 
-window.addEventListener("scroll", scrollEffect);
+window.addEventListener("scroll", (e) => {
+  scrollEffect();
+});
 
 const scrollEffect = () => {
   let st = window.scrollY;
