@@ -75,7 +75,9 @@ gulp.task('serve', gulp.series(gulp.parallel('jekyll-build', 'js:webpack'), done
   browserSync.init({
    server: {
      baseDir: paths.build
-   }
+   },
+   notify: false,
+   open: false
   });
 
    gulp.watch(sassFiles).on('change', gulp.series('jekyll-build'));
