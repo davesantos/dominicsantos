@@ -1,9 +1,11 @@
 'use strict';
 
-const gulp = require("gulp");
-const browserSync = require('browser-sync');
-const exec = require('child_process').exec
-const sass = require('gulp-sass');
+import gulp from 'gulp';
+import browserSync from 'browser-sync';
+import child_process from 'child_process';
+import sass from 'gulp-sass';
+
+const exec = child_process.exec;
 
 const paths = {
   build: '_site',
