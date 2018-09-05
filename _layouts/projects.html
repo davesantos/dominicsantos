@@ -30,13 +30,13 @@ layout: default
     {% for image in images %}
       {% if site.env == 'production' or jekyll.environment == "production" %}
         {% if project.permalink %}
-          <a href="{{ project.permalink}}"><img src="{{ image | prepend: image_asset_path | prepend: site.url | append: '_1080.jpg' }}" alt=""/></a>
+          <a rel="noreferrer" href="{{ project.permalink}}"><img src="{{ image | prepend: image_asset_path | prepend: site.url | append: '_1080.jpg' }}" alt=""/></a>
         {% else %}
           <img src="{{ image | prepend: image_asset_path | prepend: site.url | append: '_1080.jpg' }}" alt=""/>
         {% endif %}
       {% else %}
         {% if project.permalink %}
-          <a href="{{ project.permalink}}"><img src="{{ image | prepend: image_asset_path | append: '_1080.jpg' }}" alt=""/></a>
+          <a rel="noreferrer" href="{{ project.permalink}}"><img src="{{ image | prepend: image_asset_path | append: '_1080.jpg' }}" alt=""/></a>
         {% else %}
           <img src="{{ image | prepend: image_asset_path | append: '_1080.jpg' }}" alt=""/>
         {% endif %}
