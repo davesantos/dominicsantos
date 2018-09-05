@@ -1,29 +1,29 @@
 'use strict';
 
-var gulp = require("gulp");
-var browserSync = require('browser-sync');
-var exec = require('child_process').exec
-var sass = require('gulp-sass');
+const gulp = require("gulp");
+const browserSync = require('browser-sync');
+const exec = require('child_process').exec
+const sass = require('gulp-sass');
 
-var paths = {
+const paths = {
   build: '_site',
   css: 'css',
   sass: ['css'],
   scripts: ['js']
 };
 
-var sassFiles = [
+const sassFiles = [
   'css/**/*',
   '_sass/**/*'
 ]
 
-var jsFiles = [
+const jsFiles = [
   'js/src/*.js',
   'js/vendor/*.js',
   'js/*.js'
 ]
 
-var jekyllFiles = [
+const jekyllFiles = [
   '*.{html,yml,md}',
   '_posts/*.markdown',
   '_posts/*.md',
@@ -47,10 +47,9 @@ function webpackBuild(cb) {
 }
 
 gulp.task('sass', function () {
-  var stream = gulp.src(sassFiles)
+  return gulp.src(sassFiles)
     .pipe(sass.sync().on('error', sass.logError))
     .pipe(gulp.dest(paths.build + '/' + paths.css));
-  return stream;
 });
 
 // gulp.task('js', function() {
@@ -68,10 +67,6 @@ gulp.task('jekyll-build', function(cb) {
 });
 
 gulp.task('js:webpack', webpackBuild );
-
-gulp.task('jekyll-rebuild', gulp.series('jekyll-build', function(done) {
-  browserSync.reload(), done();
-}));
 
 gulp.task('serve', gulp.series(gulp.parallel('jekyll-build', 'js:webpack'), function(done) {
 

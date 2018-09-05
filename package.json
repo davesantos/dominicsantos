@@ -2,7 +2,10 @@
   "name": "dominicsantos",
   "author": "Dave Santos <info@davesantos.com> (https://davesantos.com)",
   "devDependencies": {
-    "browser-sync": "^2.24.6",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.0.2",
+    "babel-preset-env": "^1.7.0",
+    "browser-sync": "^2.24.7",
     "child_process": "^1.0.2",
     "flickity": "^2.1.2",
     "gulp": "^4.0.0",
@@ -25,6 +28,11 @@
     "jquery": "^3.3.1",
     "lodash": "^4.17.10",
     "minimatch": "^3.0.4"
+  },
+  "babel": {
+    "presets": [
+      "env"
+    ]
   },
   "scripts": {
     "start": "node_modules/.bin/webpack --watch",
