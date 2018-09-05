@@ -15,12 +15,7 @@ module.exports =  {
   module: {
 
     rules: [
-    {
-      test: /flickity/,
-      use: [{
-        loader: 'imports-loader?define=>false&this=>window'
-      }]
-    }
+
     ]
   }
 };

@@ -70,7 +70,7 @@ gulp.task('jekyll-build', cb => {
 
 gulp.task('js:webpack', webpackBuild );
 
-gulp.task('serve', gulp.series(gulp.parallel('jekyll-build', 'js:webpack'), done => {
+gulp.task('serve', gulp.series(gulp.parallel('js:webpack', 'jekyll-build'), done => {
 
   browserSync.init({
    server: {

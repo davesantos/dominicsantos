@@ -1,6 +1,8 @@
-const Flickity = require('flickity');
-const WebFont = require('webfontloader');
+import Flickity from 'flickity';
+import WebFont from 'webfontloader';
+import SmoothScroll from 'smooth-scroll';
 const scroll = new SmoothScroll('a[href*="#"]');
+
 //------------------------------------------------------------
 //
 //  Google Webfont Loader
