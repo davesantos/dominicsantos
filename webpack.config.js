@@ -1,6 +1,6 @@
 const path = require('path');
 module.exports =  {
-  context: path.join(__dirname, 'js'),
+  context: path.join(__dirname, '_webpack'),
   mode: 'none',
   entry: './main.js',
   output: {
