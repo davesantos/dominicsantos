@@ -1,28 +1,17 @@
 // import $ from 'jquery';
 const Flickity = require('flickity');
 const scroll = new SmoothScroll('a[href*="#"]');
-
+const WebFont = require('webfontloader');
 //------------------------------------------------------------
 //
 //  Google Webfont Loader
 //
 //------------------------------------------------------------
-
-WebFontConfig = {
+WebFont.load({
   google: { families: [
     'Oranienbaum::latin'
   ]}
-};
-
-(() => {
-  let wf = document.createElement('script');
-  wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
-    '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
-  wf.type = 'text/javascript';
-  wf.async = 'true';
-  let s = document.getElementsByTagName('script')[0];
-  s.parentNode.insertBefore(wf, s);
-})();
+});
 
 //------------------------------------------------------------
 //
