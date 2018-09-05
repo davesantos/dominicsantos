@@ -32,13 +32,13 @@ const jekyllFiles = [
 ]
 
 // Unused
-function errorHandler(error) {
+const errorHandler = error => {
   console.error(String(error));
   this.emit('end');
   browserSync.notify('Error');
 }
 
-function webpackBuild(cb) {
+const webpackBuild = cb => {
   exec('npm run build', function(err, stdout, stderr) {
     console.log(stdout);
     console.log(stderr);
@@ -46,7 +46,7 @@ function webpackBuild(cb) {
   });
 }
 
-gulp.task('sass', function () {
+gulp.task('sass', () => {
   return gulp.src(sassFiles)
     .pipe(sass.sync().on('error', sass.logError))
     .pipe(gulp.dest(paths.build + '/' + paths.css));
@@ -58,8 +58,8 @@ gulp.task('sass', function () {
 //   return stream;
 // });
 
-gulp.task('jekyll-build', function(cb) {
-  exec('bundle exec jekyll build', function(err, stdout, stderr) {
+gulp.task('jekyll-build', cb => {
+  exec('bundle exec jekyll build', (err, stdout, stderr) => {
     console.log(stdout);
     console.log(stderr);
     cb(err);
@@ -68,7 +68,7 @@ gulp.task('jekyll-build', function(cb) {
 
 gulp.task('js:webpack', webpackBuild );
 
-gulp.task('serve', gulp.series(gulp.parallel('jekyll-build', 'js:webpack'), function(done) {
+gulp.task('serve', gulp.series(gulp.parallel('jekyll-build', 'js:webpack'), done => {
 
   browserSync.init({
    server: {
