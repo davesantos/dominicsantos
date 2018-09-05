@@ -14,7 +14,7 @@ WebFontConfig = {
   ]}
 };
 
-(function() {
+(() => {
   let wf = document.createElement('script');
   wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
     '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
@@ -61,13 +61,13 @@ for ( let i = 0, total = galleryElems.length; i < total; i++ ) {
 //
 //------------------------------------------------------------
 
-const lastFixPos = 0;
+let lastFixPos = 0;
 const threshold = 150; //sensitivity on scrolling
 const theHead = document.querySelector(".header");
 
 window.addEventListener("scroll", scrollEffect);
 
-function scrollEffect() {
+const scrollEffect = () => {
   let st = window.scrollY;
   let diff = Math.abs(window.scrollY - lastFixPos);
   if (diff > threshold || st < 100) {
@@ -92,9 +92,9 @@ function scrollEffect() {
 //
 //------------------------------------------------------------
 
-function externalLinks() {
+const externalLinks = () => {
   for(let c = document.getElementsByTagName("a"), a = 0;a < c.length;a++) {
-    let b = c[a];
+    const b = c[a];
     b.getAttribute("href") && b.hostname !== location.hostname && (b.target = "_blank")
   }
 };
