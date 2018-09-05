@@ -67,13 +67,13 @@ gulp.task('jekyll-build', function(cb) {
   });
 });
 
-gulp.task('webpack:build', webpackBuild );
+gulp.task('js:webpack', webpackBuild );
 
 gulp.task('jekyll-rebuild', gulp.series('jekyll-build', function(done) {
   browserSync.reload(), done();
 }));
 
-gulp.task('serve', gulp.series('jekyll-build', function(done) {
+gulp.task('serve', gulp.series(gulp.parallel('jekyll-build', 'js:webpack'), function(done) {
 
   browserSync.init({
    server: {
@@ -82,7 +82,7 @@ gulp.task('serve', gulp.series('jekyll-build', function(done) {
   });
 
    gulp.watch(sassFiles).on('change', gulp.series('jekyll-build'));
-   gulp.watch(jsFiles).on('change', gulp.series('webpack:build'));
+   gulp.watch(jsFiles).on('change', gulp.series('js:webpack'));
    gulp.watch(jekyllFiles).on('all', gulp.series('jekyll-build'));
    gulp.watch(paths.build + '/**/*').on('all', browserSync.reload);
    return console.log('Serve function ran'), done();
