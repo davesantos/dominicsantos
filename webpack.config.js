@@ -2,6 +2,7 @@ const path = require('path');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const ImageminPlugin = require('imagemin-webpack-plugin').default;
+const ImageminMozjpeg = require('imagemin-mozjpeg');
 
 module.exports =  {
   context: path.join(__dirname, '_webpack'),
@@ -17,7 +18,15 @@ module.exports =  {
       from: path.resolve('_uploads'),
       to: '../../uploads/',
     }]),
-    new ImageminPlugin({ test: /\.(jpe?g|png|gif|svg)$/i })
+    new ImageminPlugin({
+      test: /\.(jpe?g|png|gif|svg)$/i,
+      plugins: [
+        ImageminMozjpeg({
+          quality: 75,
+          progressive: true
+       })
+      ]
+    })
   ],
   module: {
     rules: [
