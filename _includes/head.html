@@ -34,9 +34,9 @@
   <link type="text/css" rel="stylesheet" href="{{ 'all.css' | prepend: '/css/' | replace: '//', '/' }}">
   {% endif %}
 
-
-  {% comment %}
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url | replace: '//', '/' }}">
+  <link rel="alternate" href="{{ site.url }}" hreflang="en-us" />
+  {% comment %}
   <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}">
   {% endcomment %}
 
