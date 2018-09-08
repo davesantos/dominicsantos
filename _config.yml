@@ -9,7 +9,7 @@ exclude: ["Gemfile", "modernizr-config.json", "*.lock", "bower_components", "nod
 # baseurl: dominicsantos
 
 # Don't forget trailing slash or it won't work on test server
-permalink: :year/:title/
+# permalink: :year/:title/
 sass:
   # style: compressed
   # sass_dir: _sass
