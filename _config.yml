@@ -25,7 +25,7 @@ exclude:
 # Don't forget trailing slash or it won't work on test server
 # permalink: :year/:title/
 sass:
-  # style: compressed
+  style: compressed
   # sass_dir: _sass
 
 # =======================================
