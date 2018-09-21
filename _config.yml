@@ -4,8 +4,22 @@ description: Dominic Santos is a multidisciplinary artist and director based in 
 url: https://dominicsantos.com
 markdown: kramdown
 permalink: /posts/:title
-exclude: ["bower_components", "node_modules", "config.rb", "gulpfile.js", "package.json","*.sublime-project", "*.sublime-workspace", "*.log", "css/_breakpoints", "LICENSE", "README.md"]
-exclude: ["Gemfile", "modernizr-config.json", "*.lock", "bower_components", "node_modules", "config.rb", "gulpfile.js", "package.json", "package-lock.json","*.sublime-project", "*.sublime-workspace", "*.log", "LICENSE", "README.md"]
+exclude:
+- "*.lock"
+- "*.log"
+- "*.sublime-project"
+- "*.sublime-workspace"
+- "Gemfile"
+- "LICENSE"
+- "README.md"
+- "bower_components"
+- "config.rb"
+- "gulpfile.js"
+- "modernizr-config.json"
+- "node_modules"
+- "package-lock.json"
+- "package.json"
+- "webpack.config.js"
 # baseurl: dominicsantos
 
 # Don't forget trailing slash or it won't work on test server
