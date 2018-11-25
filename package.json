@@ -42,7 +42,7 @@
   },
   "scripts": {
     "start": "gulp",
-    "dev": "webpack --mode development && cp -a js/dist/. _site/js/dist/",
-    "build": "webpack --mode production && cp -a js/dist/. _site/js/dist/"
+    "dev": "webpack --mode development && cp -a js _site",
+    "build": "webpack --mode production && cp -a js _site"
   }
 }
