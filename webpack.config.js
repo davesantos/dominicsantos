@@ -14,10 +14,10 @@ module.exports =  {
   },
   plugins: [
     new CleanWebpackPlugin(['dist'], { root: path.resolve(__dirname, 'js'), verbose: true }),
-    new CopyWebpackPlugin([{
-      from: path.resolve('_uploads'),
-      to: '../../uploads/',
-    }]),
+    // new CopyWebpackPlugin([{
+    //   from: path.resolve('_uploads'),
+    //   to: '../../uploads/',
+    // }]),
     new ImageminPlugin({
       test: /\.(jpe?g|png|gif|svg)$/i,
       plugins: [
