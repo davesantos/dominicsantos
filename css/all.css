@@ -31,8 +31,7 @@
 body {
   display: flex;
   flex-direction: column;
-  font-family: "Helvetica", arial, sans-serif;
-  opacity: 0;
+  font-family: arial,"Helvetica", sans-serif;
   background: var(--color-background);
   color: var(--color-text);
 }
@@ -123,8 +122,6 @@ nav ul li {
   text-align: center;
   max-width: 1080px;
   margin: 10em auto;
-  padding-left: modular-scale(-5);
-  padding-right: modular-scale(-5);
 }
 
 .footer {
@@ -132,8 +129,6 @@ nav ul li {
   opacity: 0.5;
   flex-shrink: 0;
   margin: 1em auto;
-  padding-left: modular-scale(-5);
-  padding-right: modular-scale(-5);
 }
 
 .carousel {
