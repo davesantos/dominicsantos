@@ -1,3 +1,4 @@
+@import "../css/normalize.css";
 @import "../css/flickity.css";
 
 @media screen and (min-width: 320px) {
@@ -26,12 +27,13 @@
   --color-text: #fff;
   --color-background: #000;
   --padding-spacer: 1.5em;
+  --font-family: "Fenwick", Arial, "Helvetica", sans-serif;
 }
 
 body {
   display: flex;
   flex-direction: column;
-  font-family: arial,"Helvetica", sans-serif;
+  font-family: var(--font-family);
   background: var(--color-background);
   color: var(--color-text);
 }
