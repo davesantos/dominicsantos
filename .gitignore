@@ -6,6 +6,7 @@
 .jekyll-metadata
 .sass-cache
 _site
-js/dist/
+_uploads
+js
 bower_components
 node_modules
