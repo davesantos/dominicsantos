@@ -1,6 +1,7 @@
 const { watch, series } = require('gulp');
 const { exec } = require('child_process');
 const browserSync = require('browser-sync').create();
+const reload = browserSync.reload;
 
 
 const paths = {
@@ -8,6 +9,25 @@ const paths = {
   css: 'css',
   scripts: ['js']
 };
+
+const cssFiles = [
+  'css/**/*',
+]
+
+const jsFiles = [
+  'js/src/*.js',
+  'js/vendor/*.js',
+  'js/*.js'
+]
+
+const jekyllFiles = [
+  '*.{html,yml,md}',
+  '_posts/*.markdown',
+  '_posts/*.md',
+  '_layouts/*.html',
+  '_includes/*.html'
+]
+
 
 // The `clean` function is not exported so it can be considered a private task.
 // It can still be used within the `series()` composition.
@@ -23,8 +43,10 @@ function build(cb) {
     console.log(stdout);
     console.log(stderr);
     cb(err);
+    console.log('BUILD!!!')
   });
 }
+
 
 function serve() {
 
@@ -36,9 +58,10 @@ function serve() {
    open: false
   });
 
-  watch(paths.build + '/**/*').on('all', browserSync.reload);
 
-}
+  watch(cssFiles, series(build));
+  watch(paths.build + '/**/*').on('all', reload);
+};
 
 exports.build = build;
 exports.default = series(clean, build, serve);

@@ -10,11 +10,6 @@
     "type": "git",
     "url": "https://github.com/davesantos/dominicsantos.git"
   },
-  "babel": {
-    "presets": [
-      "env"
-    ]
-  },
   "scripts": {
     "start": "gulp",
     "dev": "cp -a js _site",
