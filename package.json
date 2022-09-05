@@ -2,13 +2,13 @@
   "name": "dominicsantos",
   "author": "Dave Santos <info@davesantos.com> (https://davesantos.com)",
   "devDependencies": {
+    "browser-sync": "^2.27.10",
+    "gulp": "^4.0.2"
   },
   "license": "MIT",
   "repository": {
     "type": "git",
     "url": "https://github.com/davesantos/dominicsantos.git"
-  },
-  "dependencies": {
   },
   "babel": {
     "presets": [
