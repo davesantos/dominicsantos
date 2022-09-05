@@ -1,4 +1,4 @@
-const { watch, series } = require('gulp');
+const { watch, src, dest, series } = require('gulp');
 const { exec } = require('child_process');
 const browserSync = require('browser-sync').create();
 const reload = browserSync.reload;
@@ -15,8 +15,6 @@ const cssFiles = [
 ]
 
 const jsFiles = [
-  'js/src/*.js',
-  'js/vendor/*.js',
   'js/*.js'
 ]
 
@@ -43,10 +41,8 @@ function build(cb) {
     console.log(stdout);
     console.log(stderr);
     cb(err);
-    console.log('BUILD!!!')
   });
 }
-
 
 function serve() {
 
@@ -57,7 +53,6 @@ function serve() {
    notify: false,
    open: false
   });
-
 
   watch(cssFiles, series(build));
   watch(paths.build + '/**/*').on('all', reload);
