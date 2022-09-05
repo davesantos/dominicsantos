@@ -3,20 +3,17 @@
 import gulp from 'gulp';
 import browserSync from 'browser-sync';
 import child_process from 'child_process';
-import sass from 'gulp-sass';
 
 const exec = child_process.exec;
 
 const paths = {
   build: '_site',
   css: 'css',
-  sass: ['css'],
   scripts: ['js']
 };
 
-const sassFiles = [
+const cssFiles = [
   'css/**/*',
-  '_sass/**/*'
 ]
 
 const jsFiles = [
@@ -48,9 +45,8 @@ const webpackBuild = cb => {
   });
 }
 
-gulp.task('sass', () => {
-  return gulp.src(sassFiles)
-    .pipe(sass.sync().on('error', sass.logError))
+gulp.task('css', () => {
+  return gulp.src(cssFiles)
     .pipe(gulp.dest(paths.build + '/' + paths.css));
 });
 
@@ -80,7 +76,7 @@ gulp.task('serve', gulp.series(gulp.parallel('js:webpack', 'jekyll-build'), done
    open: false
   });
 
-   gulp.watch(sassFiles).on('change', gulp.series('jekyll-build'));
+   gulp.watch(cssFiles).on('change', gulp.series('jekyll-build'));
    gulp.watch(jsFiles).on('change', gulp.series('js:webpack'));
    gulp.watch(jekyllFiles).on('all', gulp.series('jekyll-build'));
    gulp.watch(paths.build + '/**/*').on('all', browserSync.reload);

@@ -4,9 +4,7 @@
 .asset-cache
 .bundle
 .jekyll-metadata
-.sass-cache
 _site
 _uploads
 js
-bower_components
 node_modules

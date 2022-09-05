@@ -10,16 +10,16 @@ layout: default
 
   {% if images.size > 1 %}
 
-  <div class="carousel">
+  <div class="swiper">
     {% for image in images %}
-    <div class="carousel-cell">
+    <div class="swiper-wrapper">
       {% if image contains "http://" or image contains "https://" %}
       <img src="{{ image }}" alt=""/>
       {% else %}
         {% if site.env == 'production' or jekyll.environment == "production" %}
-        <img data-flickity-lazyload="{{ image | prepend: image_asset_path | prepend: site.url | append: '_1080.jpg' }}" alt=""/>
+        <img src="{{ image | prepend: image_asset_path | prepend: site.url | append: '_1080.jpg' }}" alt=""/>
         {% else %}
-        <img data-flickity-lazyload="{{ image | prepend: image_asset_path | append: '_1080.jpg' }}" alt=""/>
+        <img src="{{ image | prepend: image_asset_path | append: '_1080.jpg' }}" alt=""/>
         {% endif %}
       {% endif %}
     </div>
