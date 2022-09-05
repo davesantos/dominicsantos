@@ -11,19 +11,21 @@ layout: default
   {% if images.size > 1 %}
 
   <div class="swiper">
-    {% for image in images %}
     <div class="swiper-wrapper">
-      {% if image contains "http://" or image contains "https://" %}
-      <img src="{{ image }}" alt=""/>
-      {% else %}
-        {% if site.env == 'production' or jekyll.environment == "production" %}
-        <img src="{{ image | prepend: image_asset_path | prepend: site.url | append: '_1080.jpg' }}" alt=""/>
+      {% for image in images %}
+      <div class="swiper-slide">
+        {% if image contains "http://" or image contains "https://" %}
+        <img src="{{ image }}" alt=""/>
         {% else %}
-        <img src="{{ image | prepend: image_asset_path | append: '_1080.jpg' }}" alt=""/>
+          {% if site.env == 'production' or jekyll.environment == "production" %}
+          <img src="{{ image | prepend: image_asset_path | prepend: site.url | append: '_1080.jpg' }}" alt=""/>
+          {% else %}
+          <img src="{{ image | prepend: image_asset_path | append: '_1080.jpg' }}" alt=""/>
+          {% endif %}
         {% endif %}
-      {% endif %}
+      </div>
+      {% endfor %}
     </div>
-    {% endfor %}
   </div>
 
   {% else %}

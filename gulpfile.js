@@ -15,7 +15,7 @@ const cssFiles = [
 ]
 
 const jsFiles = [
-  'js/*.js'
+  'js/**/*.js'
 ]
 
 const jekyllFiles = [
@@ -26,12 +26,14 @@ const jekyllFiles = [
   '_includes/*.html'
 ]
 
-
-// The `clean` function is not exported so it can be considered a private task.
-// It can still be used within the `series()` composition.
 function clean(cb) {
-  // body omitted
+  console.log('cleaned');
   cb();
+}
+
+function jsBuild() {
+  return src(jsFiles)
+    .pipe(dest(paths.build + '/' + paths.scripts));
 }
 
 // The `build` function is exported so it is public and can be run with the `gulp` command.
@@ -55,6 +57,7 @@ function serve() {
   });
 
   watch(cssFiles, series(build));
+  watch(jsFiles, jsBuild);
   watch(paths.build + '/**/*').on('all', reload);
 };
 
