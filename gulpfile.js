@@ -36,6 +36,11 @@ function jsBuild() {
     .pipe(dest(paths.build + '/' + paths.scripts));
 }
 
+function cssBuild() {
+  return src(cssFiles)
+    .pipe(dest(paths.build + '/' + paths.css));
+}
+
 // The `build` function is exported so it is public and can be run with the `gulp` command.
 // It can also be used within the `series()` composition.
 function build(cb) {
@@ -56,8 +61,9 @@ function serve() {
    open: false
   });
 
-  watch(cssFiles, series(build));
+  watch(cssFiles, cssBuild);
   watch(jsFiles, jsBuild);
+  watch(jekyllFiles, build);
   watch(paths.build + '/**/*').on('all', reload);
 };
 

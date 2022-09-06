@@ -2,6 +2,7 @@ const swiper = new Swiper('.swiper', {
   // Optional parameters
   loop: true,
   speed: 500,
+  autoHeight: true,
   autoplay: {
     delay: 5000,
     disableOnInteraction: true,
@@ -13,6 +14,3 @@ const swiper = new Swiper('.swiper', {
   },
 
 });
-
-
-console.log('this is main!');
