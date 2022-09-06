@@ -1,10 +1,10 @@
 const swiper = new Swiper('.swiper', {
   // Optional parameters
-  cssMode: true,
   loop: true,
+  speed: 500,
   autoplay: {
     delay: 5000,
-    disableOnInteraction: false,
+    disableOnInteraction: true,
   },
   // Navigation arrows
   navigation: {
