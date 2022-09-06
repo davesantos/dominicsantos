@@ -132,14 +132,9 @@ nav ul li {
   margin: 1em auto;
 }
 
-.carousel {
-  max-width: 1080px;
-  margin: 0 auto;
-}
 
-.carousel-cell {
-  width: 100%;
-  height: auto;
+div.swiper-button-prev, div.swiper-button-next {
+  color: var(--color-text);
 }
 
 @media only screen and (min-width: 768px) {
