@@ -5,7 +5,8 @@ layout: default
 {% assign projects = site.projects | sort:"weight" %}
 {% for project in projects %}
 {% unless project.draft %}
-<article class="article">
+<article class="article {% if project.half %}half{% endif %}">
+
   {% assign images = project.images %}
 
   {% if images.size > 1 %}
