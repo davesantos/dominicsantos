@@ -96,13 +96,10 @@ nav ul li {
   padding: 0.1rem 1.5rem;
 }
 
-.hide {
-  top: -80px;
-}
-
 .main {
   margin-top: 4em;
-  flex: 1 0 auto;
+  display: flex;
+  flex-wrap: wrap;
 }
 .main a {
   cursor: alias;
@@ -115,9 +112,10 @@ nav ul li {
 }
 
 .article {
-  display: block;
   margin-bottom: 5rem;
 }
+
+
 
 #info {
   text-align: center;
@@ -132,12 +130,19 @@ nav ul li {
   margin: 1em auto;
 }
 
+/* Swiper JS */
 
+div.swiper {
+  max-width: 1080px;
+}
 div.swiper-button-prev, div.swiper-button-next {
   color: var(--color-text);
 }
 
 @media only screen and (min-width: 768px) {
+
+  /* Desktop */
+
   .header, .footer {
     padding-left: 8vw;
     padding-right: 8vw;
@@ -146,6 +151,12 @@ div.swiper-button-prev, div.swiper-button-next {
   .main {
     padding-left: 8vw;
     padding-right: 8vw;
+  }
+
+  article.half {
+    flex: 0 0 50%;
+    width: 50%;
+
   }
 
   .footer {
