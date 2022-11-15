@@ -14,6 +14,7 @@
 @-ms-viewport {
   width: device-width;
 }
+
 *, *:before, *:after {
   box-sizing: border-box;
 }
@@ -78,7 +79,6 @@ nav ul li {
   justify-content: space-between;
   overflow: hidden;
   padding-top: var(--padding-spacer);
-  position: fixed;
   top: 0;
   transition: top 250ms linear;
   width: 100%;
@@ -113,9 +113,8 @@ nav ul li {
 
 .article {
   margin-bottom: 5rem;
+  width: 100%;
 }
-
-
 
 #info {
   text-align: center;
@@ -132,11 +131,17 @@ nav ul li {
 
 /* Swiper JS */
 
-div.swiper {
-  max-width: 1080px;
+.swiper-button-prev:after,
+.swiper-button-next:after {
+  display: none;
 }
-div.swiper-button-prev, div.swiper-button-next {
-  color: var(--color-text);
+
+div.swiper-button-next,
+div.swiper-button-prev,
+.swiper-container-rtl .swiper-button-prev,
+.swiper-container-rtl .swiper-button-next{
+  width: 1rem;
+  fill: white;
 }
 
 @media only screen and (min-width: 768px) {
@@ -153,11 +158,12 @@ div.swiper-button-prev, div.swiper-button-next {
     padding-right: 8vw;
   }
 
-  article.half {
+  /* article.half {
     flex: 0 0 50%;
     width: 50%;
+    padding-right: 20px;
 
-  }
+  } */
 
   .footer {
     font-size: 0.8rem;
