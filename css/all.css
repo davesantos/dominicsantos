@@ -91,10 +91,6 @@ nav ul li {
   font-size: inherit;
   letter-spacing: 0.05rem;
 }
-.header h1 a {
-  box-shadow: inset 0 0 0 2px var(--color-text);
-  padding: 0.1rem 1.5rem;
-}
 
 .main {
   margin-top: 4em;
@@ -116,6 +112,7 @@ nav ul li {
   width: 100%;
 }
 
+
 #info {
   text-align: center;
   max-width: 1080px;
@@ -131,7 +128,14 @@ nav ul li {
 
 /* Swiper JS */
 
-.swiper-button-prev:after,
+div.swiper {
+  max-width: 1080px;
+}
+div.swiper-button-prev, div.swiper-button-next {
+  color: var(--color-text);
+}
+
+/* .swiper-button-prev:after,
 .swiper-button-next:after {
   display: none;
 }
@@ -142,7 +146,8 @@ div.swiper-button-prev,
 .swiper-container-rtl .swiper-button-next{
   width: 1rem;
   fill: white;
-}
+} */
+
 
 @media only screen and (min-width: 768px) {
 
