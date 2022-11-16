@@ -1,6 +1,6 @@
 ---
 title: Paint Slides
-weight: 1
+weight: 20
 half: true
 date: 2018-11-25 05:07:59 +0000
 images:
