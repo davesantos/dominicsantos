@@ -8,6 +8,10 @@ images:
 - malibu-tiles-dominicsantos-3
 - malibu-tiles-dominicsantos-4
 - malibu-tiles-dominicsantos-5
+- allah_las_regent_betterlights
+- allah_las_regent_dominic_santos2
+- allah_las_regent_dominic_santos3
+- allah_las_regent_dominic_santos4
 
 ---
 “Malibu Tiles” Acetate collage slide projections. Studio documentation. — December 2016
